@@ -1,4 +1,5 @@
 #!/bin/bash
+set -x
 make clean
 json_out=`pwd`/errors.json
 report_out=`pwd`/report
