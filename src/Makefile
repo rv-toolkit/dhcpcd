@@ -69,7 +69,7 @@ if-options.c: dhcpcd-embedded.h
 depend: .depend
 
 ${PROG}: ${DEPEND} ${OBJS}
-	${CC} ${LDFLAGS} -o $@ ${OBJS} ${LDADD}
+	${CC} ${CFLAGS} ${LDFLAGS} -o $@ ${OBJS} ${LDADD}
 
 lint:
 	${LINT} -Suz ${CPPFLAGS} ${SRCS} ${PCRYPT_SRCS} ${PCOMPAT_SRCS}

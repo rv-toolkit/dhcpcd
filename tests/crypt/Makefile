@@ -29,7 +29,7 @@ distclean: clean
 	${CC} ${CPPFLAGS} -MM ${SRCS} ${PCRYPT_SRCS}
 
 ${PROG}: ${DEPEND} ${OBJS}
-	${CC} ${LDFLAGS} -o $@ ${OBJS} ${LDADD}
+	${CC} ${CFLAGS} ${LDFLAGS} -o $@ ${OBJS} ${LDADD}
 
 test: ${PROG}
 	./${PROG}

@@ -38,7 +38,7 @@ distclean: clean
 depend:
 
 ${PROG}: ${DEPEND} ${OBJS}
-	${CC} ${LDFLAGS} -o $@ ${OBJS}
+	${CC} ${CFLAGS} ${LDFLAGS} -o $@ ${OBJS}
 
 test: ${PROG}
 	./${PROG}
