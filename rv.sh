@@ -11,5 +11,5 @@ export LD=kcc
 ./configure
 make -j`nproc`
 make tests
-rv-html-report $json_out -o $report_out
+touch $json_out && rv-html-report $json_out -o $report_out
 rv-upload-report $report_out
