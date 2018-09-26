@@ -11,6 +11,7 @@ export CPPFLAGS="-fissue-report=$json_out"
 export LD=kcc
 ./configure
 make -j`nproc`
+rm $json_out
 make tests
 touch $json_out && rv-html-report $json_out -o $report_out
 rv-upload-report $report_out
