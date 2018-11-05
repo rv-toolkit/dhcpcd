@@ -7,7 +7,7 @@ rm -rf $json_out
 rm -rf $report_out
 export CC=kcc
 export CFLAGS="-D__packed='__attribute__((packed))' -frecover-all-errors -fissue-report=$json_out"
-export CPPFLAGS="-fissue-report=$json_out"
+export CXXFLAGS="-fissue-report=$json_out"
 export LD=kcc
 ./configure
 make -j`nproc`
