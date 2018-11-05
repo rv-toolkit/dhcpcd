@@ -1,0 +1,7 @@
+# Create .travis.yml under the root directory of your repository.
+script:
+  - bash <(curl -s https://runtimeverification.com/toolkit/docker/bash) nightly-2018-11-05
+
+#==============================================================================
+# This will download rv-toolkit docker image with tag "nightly" and run `.rv.sh` file.
+# More images could be found at: https://hub.docker.com/r/runtimeverification/rv-sandbox/tags/
